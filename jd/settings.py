@@ -22,7 +22,9 @@ MAX_PAGE=10
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 ITEM_PIPELINES={
-    'jd.pipelines.MongoPipeline':1
+    
+    'jd.pipelines.Pipeline_toCSV':1,
+    'jd.pipelines.MongoPipeline':2
 }
 MONGO_URL='localhost'
 MONGO_DB='jd'

@@ -31,7 +31,7 @@ class JdcrawlSpider(Spider):
             item['image'] = ''.join(product.xpath('.//div[@class="p-img"]//a/@href').extract()).strip()#dei
             item['price'] = ''.join(product.xpath('.//div[@class="p-price"]//i/text()').extract()).strip()#dei
             item['shop'] = ''.join(product.xpath('.//div[contains(@class, "shop")]//a/text()').extract()).strip()#dei
-            item['title'] = ''.join(product.xpath('.//div[contains(@class,"p-name")]//em').extract()).strip()#dei
+            item['title'] = ''.join(product.xpath('.//div[contains(@class,"p-name")]//em//text()').extract()).strip()#dei
             item['deal'] = ''.join(product.xpath('.//div[@class="p-commit"]//text()').extract()).strip()#dei
             
             
